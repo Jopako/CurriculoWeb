@@ -38,6 +38,16 @@ body {
 .pill i {
   color: #ffffff; 
   margin-right: 0.3rem;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+
+.pill:hover
+{
+   transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+  z-index: 10; 
+   cursor: pointer;
 }
 
 .container {
@@ -102,6 +112,13 @@ body {
   border-radius: 10px;
   padding-bottom: 2em;
   background: rgba(255, 255, 255, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact:hover
+{
+ transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+  z-index: 10; 
 }
 
 .contact a {
@@ -112,12 +129,21 @@ body {
   text-decoration: none;
  
 }
-
+.contact-item
+{
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-item:hover
+{
+   transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+  z-index: 10; 
+}
 .social {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  font-size: 1.50rem;
+  font-size: 1.80rem;
   justify-content: center;
 }
 
@@ -253,8 +279,22 @@ main {
 {
 text-align: center;
 padding: 2em 2em;
-  border-radius: 10px;
+border-radius: 10px;
+}
 
+#habilidade_ajuste h3
+{
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+#habilidade_ajuste h3:hover
+{
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+  z-index: 10; 
+  border-radius: 8px;
+  padding: auto;
 }
 
 .contact-item {
@@ -281,6 +321,16 @@ padding: 2em 2em;
   color: #dad0d0; 
 }
 
+.contact-div
+
+ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
 footer {
   font-size: 0.85rem;
   color: var(--muted);
@@ -300,6 +350,28 @@ footer {
   main {
     padding: 1.5rem;
   }
+
+
+    .contact
+  {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; 
+
+  
+  }
+
+  .contact-div {
+  flex-direction: column;
+    justify-content: center;
+    width: 100%; 
+  }
+
+ .social {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; 
+  }
 }
 
 @media (max-width: 500px) {
@@ -315,11 +387,35 @@ footer {
     padding: 1rem;
   }
 
-  .skills {
-    flex-direction: column;
+  .skills 
+  {
+    flex-direction: row;
   }
 
   .skill {
     flex: 1 1 auto;
   }
+
+  .contact
+  {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; 
+
+  
+  }
+
+  .contact-div {
+  flex-direction: column;
+    justify-content: center;
+    width: 100%; 
+  }
+
+ .social {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; 
+  }
+
+
 }
