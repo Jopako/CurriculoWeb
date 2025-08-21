@@ -1,26 +1,43 @@
 :root {
-  --bg: #f6f8fb;
+  --bg: #f3f3f3;
   --card: #ffffff;
   --muted: #6b7280;
-  --accent: #0ea5a4;
-  --accent-2: #0b7285;
-  --text: #0f172a;
-  --gap: 1rem;
+  --accent: #050505;
+  --accent-2: #fefeff;
+  --text: #000000;
+  --gap: 1.25rem;
+  
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ 
 }
 
 body {
+ margin: auto;
+ padding: auto;
   font-family: Inter, system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   padding: 1rem;
   display: flex;
   justify-content: center;
+}
+.title 
+{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.role 
+{
+  font-size: 0.9em;
+}
+.pill i {
+  color: #ffffff; 
+  margin-right: 0.3rem;
 }
 
 .container {
@@ -31,7 +48,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   overflow: hidden;
+  border: solid 1px black;
 }
+
 
 .sidebar {
   background: linear-gradient(180deg, var(--accent), var(--accent-2));
@@ -39,21 +58,31 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
+  gap: var(--gap);  
+  border-right: solid 1px black;
+ 
 }
-
+.fab
+{
+  color: black;
+  transition: color 0.3s;
+}
+.fab:hover {
+  color: #dad0d0;
+}
 .sidebar>div:first-child {
   display: flex;
   /* flex-direction: column; */
   align-items: center;
   gap: var(--gap);
+  
 }
 .photo {
   width: 96px;
   height: 96px;
   border-radius: 12px;
   overflow: hidden;
-  border: 3px solid rgba(255, 255, 255, 0.15);
+  border: 2px solid black
 }
 
 .photo img {
@@ -62,34 +91,77 @@ body {
   object-fit: cover;
 }
 
+.contact
+{
+  
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  border-radius: 10px;
+  padding-bottom: 2em;
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .contact a {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
   color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
+ 
 }
 
 .social {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.50rem;
   justify-content: center;
 }
+
+.logo
+{
+  padding: 0.4rem 0.4rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+   background: #ffffff;
+}
+
+.skills-section
+{
+  margin: auto;
+  padding: 0.10rem 0.1rem;
+}
 .skills {
+  
+
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+
+  padding: 0.60rem 0.6rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+ 
 }
 
 .skill {
-  flex: 1 1 120px; /* flex-grow, flex-shrink, base width */
+  flex: 1 1 120px; 
   background: #f3f6f8;
   padding: 0.5rem;
   border-radius: 8px;
   font-size: 0.9rem;
   color: var(--text);
+    border: solid 0.5px black;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+  z-index: 10; 
 }
 
 .progress {
@@ -98,6 +170,7 @@ body {
   border-radius: 999px;
   margin-top: 0.5rem;
   overflow: hidden;
+    border: solid 1px black;
 }
 
 .progress > span {
@@ -141,10 +214,71 @@ main {
 }
 
 .project {
-  background: #fbfdff;
-  border: 1px solid #eef4f6;
+  background: #b1acb3;
+  border: 2px solid #000000;
   padding: 0.75rem;
   border-radius: 8px;
+}
+
+.hobbies
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.hobbie
+{
+    background: #b1acb3;
+  border: 2px solid #eef4f6;
+  border-color: #000000;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.hobbies-list
+{
+    list-style-type: none; 
+  padding: 0;          
+  margin: 0;
+}
+
+#hobbies-title
+{
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#habilidade_ajuste
+{
+text-align: center;
+padding: 2em 2em;
+  border-radius: 10px;
+
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.contact-item i {
+  color: #ffffff; 
+  font-size: 1rem;
+  min-width: 20px; 
+}
+
+.contact-item a {
+  color: #ffffff; 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #dad0d0; 
 }
 
 footer {
