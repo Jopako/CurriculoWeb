@@ -1,5 +1,5 @@
 :root {
-  --bg: #f3f3f3;
+  --bg: #b1acb3;
   --card: #ffffff;
   --muted: #6b7280;
   --accent: #050505;
@@ -48,6 +48,7 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
   z-index: 10; 
    cursor: pointer;
+   border-radius: 8px;
 }
 
 .container {
@@ -119,6 +120,7 @@ body {
  transform: translateY(-5px) scale(1.03);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
   z-index: 10; 
+  border-radius: 8px;
 }
 
 .contact a {
@@ -138,6 +140,7 @@ body {
    transform: translateY(-5px) scale(1.03);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
   z-index: 10; 
+  border-radius: 8px;
 }
 .social {
   display: flex;
@@ -264,11 +267,20 @@ main {
 
 .hobbies-list
 {
-    list-style-type: none; 
+  list-style-type: none; 
   padding: 0;          
   margin: 0;
-}
 
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hobbies-list:hover
+{
+  transform: translateY(0px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+  z-index: 10; 
+  border-radius: 8px;
+
+}
 #hobbies-title
 {
   font-size: 1rem;
